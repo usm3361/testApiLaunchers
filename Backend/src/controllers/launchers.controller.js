@@ -16,7 +16,14 @@ export const createLauncher = async (req, res) => {
   res.json(saved);
 };
 
-export const deleteLauncher = async(req,res)=>{
-    await Launcher.findByIdAndDelete(req.params.id)
-    res.json({msg:"Launchers successfully deleted"})
-}
+export const deleteLauncher = async (req, res) => {
+  await Launcher.findByIdAndDelete(req.params.id);
+  res.json({ msg: "Launchers successfully deleted" });
+};
+
+export const updateLauncher = async (req, res) => {
+  const launcher = await Launcher.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+  res.json(launcher);
+};
