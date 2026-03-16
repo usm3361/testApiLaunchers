@@ -14,6 +14,12 @@ connectDb();
 
 app.use("/api/launchers", launchersRoutes);
 
+app.use((error, _, res, __) => {
+  res
+    .status(error.status || 500)
+    .send({ msg: error.message || "server internal error" });
+});
+
 app.listen(PORT, async () => {
   console.log(`server is running on ${PORT}...`);
 });
