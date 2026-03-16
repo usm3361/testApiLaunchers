@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useLauncherStore } from "../store/launcherStore";
 
 export default function LancherCard({ launcher }) {

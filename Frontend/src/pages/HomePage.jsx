@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import { useLauncherStore } from "../store/launcherStore";
 import LancherCard from "../components/LancherCard";
+import { Link } from "react-router";
 
 export default function HomePage() {
-  const { launchers, fetchLaunchers } = useLauncherStore();
+  const { launchers, fetchLauncher } = useLauncherStore();
   const [citySearch, setCitySearch] = useState("");
   const [rocketTypeFilter, setRocketTypeFilter] = useState("");
 
   useEffect(() => {
-    fetchLaunchers();
+    async function getData() {
+      await fetchLauncher();
+      
+    } getData()
   }, []);
 
-  const filtered = launchers.filter((l) => {
+  const filtered = launchers?.filter((l) => {
     return (
       l.city.toLowerCase().includes(citySearch.toLowerCase()) &&
       (rocketTypeFilter === "" || l.rocketType === rocketTypeFilter)
@@ -20,7 +24,7 @@ export default function HomePage() {
 
   return (
     <div id="home-Page">
-      <h1 id="titlePage">LAUNCHERS LIST</h1>
+      <h1 id="titleHomePage">LAUNCHERS LIST</h1>
 
       <div id="filtersContainer">
         <input
@@ -30,7 +34,11 @@ export default function HomePage() {
           onChange={(e) => setCitySearch(e.target.value)}
         />
 
-        <select id="rocket-filter" className="filter-select">
+        <select
+          id="rocket-filter"
+          className="filter-select"
+          onChange={(e) => setRocketTypeFilter(e.target.value)}
+        >
           <option value="">All</option>
           <option>Shahab3</option>
           <option>Fetah110</option>
@@ -42,7 +50,7 @@ export default function HomePage() {
         </Link>
       </div>
       <div id="launchers-list">
-        {filtered.map((l) => (
+        {filtered?.map((l) => (
           <LancherCard key={l._id} launcher={l} />
         ))}
       </div>

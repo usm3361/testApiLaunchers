@@ -1,9 +1,8 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import {  BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
-import HomePage from "./pages/HomePage";
 import AddLauncherPage from "./pages/AddLauncherPage";
 import LauncherDetailsPage from "./pages/LauncherDetailsPage";
-
+import HomePage from './pages/HomePage'
 function App() {
   return (
     <div className="app-container">

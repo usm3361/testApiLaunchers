@@ -4,10 +4,12 @@ const launcherSchema = new mongoose.Schema({
   city: {
     type: String,
     require: true,
+    trim: true,
   },
   rocketType: {
     type: String,
     require: true,
+    enum: ["Shahab3", "Fetah110", "Radwan", "Kheibar"],
   },
   latitude: {
     type: Number,
@@ -20,6 +22,8 @@ const launcherSchema = new mongoose.Schema({
   name: {
     type: String,
     require: true,
+    unique: true,
+    trim: true,
   },
 });
 
