@@ -6,13 +6,15 @@ import LauncherDetailsPage from "./pages/LauncherDetailsPage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/add" element={<AddLauncherPage />} />
-        <Route path="/launcher/:id" element={<LauncherDetailsPage />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="app-container">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/add" element={<AddLauncherPage />} />
+          <Route path="/launcher/:id" element={<LauncherDetailsPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
