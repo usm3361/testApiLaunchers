@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router";
 import { useLauncherStore } from "../store/launcherStore";
 import { useState } from "react";
-import { addLauncher } from "../api/launchersApi";
 
 export default function AddLauncherPage() {
   const navigate = useNavigate();
-  const { AddLauncher } = useLauncherStore();
+  const { addLauncher } = useLauncherStore();
   const [form, setForm] = useState({
     name: "",
     rocketType: "",
@@ -28,7 +27,7 @@ export default function AddLauncherPage() {
           id="launcher-name"
           className="form-input"
           placeholder="Name"
-          onChange={(e) => setForm(...form, e.target.value)}
+          onChange={(e) => setForm({...form, name: e.target.value})}
         />
         <select
           id="rocket-type-select"
@@ -41,13 +40,15 @@ export default function AddLauncherPage() {
           <option>Kheibar</option>
         </select>
         <input
-          id="latitude-input"
-          className="form-input"
-          placeholder="Latitude"
-          onChange={(e) => setForm({ ...form, latitude: e.target.value })}
+        id="latitude-input"
+        type="number"
+        className="form-input"
+        placeholder="Latitude"
+        onChange={(e) => setForm({ ...form, latitude: e.target.value })}
         />
         <input
           id="longitude-input"
+          type="number"
           className="form-input"
           placeholder="Longitude"
           onChange={(e) => setForm({ ...form, longitude: e.target.value })}
