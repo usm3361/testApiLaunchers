@@ -8,13 +8,13 @@ import cors from "cors";
 const app = express();
 const PORT = process.env.PORT_SERVER || 3000;
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 connectDb();
 
-app.use("/api/launchers", launchersRoutes);
 app.use("/api/auth", authRoutes)
+app.use("/api/launchers", launchersRoutes);
 
 app.use((error, _, res, __) => {
   res
