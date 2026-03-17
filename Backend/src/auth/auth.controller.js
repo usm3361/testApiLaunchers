@@ -1,10 +1,11 @@
 import {
   deleteUser,
+  getAllUsers,
   getUser,
   login,
   register,
   updateUser,
-} from "./auth.service";
+} from "./auth.service.js";
 
 export const registerControl = async (req, res) => {
   const result = await register(req.body);
@@ -23,6 +24,10 @@ export const getUserControl = async (req, res) => {
   const user = await getUser(req.user.id);
   res.json(user);
 };
+export const getUsersControll = async(req,res)=>{
+    const users = await getAllUsers()
+    res.json(users)
+}
 
 export const updateUserControl = async (req, res) => {
   const user = await updateUser(req.user.id, req.body);

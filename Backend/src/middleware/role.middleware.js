@@ -1,6 +1,13 @@
 export const allowRoles = (...roles) => {
   return (req, res, next) => {
-    if (!roles.includes(req.user.type)) {
+    const userType = req.user.type;
+    if (!["admin", "intel"].includes(userType)) {
+      if (!roles.includes("airforce")) {
+        return res.status(403).json({ msg: "Not possible" });
+      }
+      return next();
+    }
+    if (!roles.includes(userType)) {
       return res.status(403).json({ msg: "Not possible" });
     }
     next();

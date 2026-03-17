@@ -34,7 +34,11 @@ export const login = async (username, password) => {
 };
 
 export const getUser = async (id) => {
-  return User.findById(id).select("-password");
+  return User.findById(id);
+};
+
+export const getAllUsers = async () => {
+  return User.find();
 };
 
 export const updateUser = async (id, data) => {
