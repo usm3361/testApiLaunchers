@@ -6,10 +6,12 @@ export const register = async (data) => {
   const exist = await User.findOne({ username: data.username });
   if (exist) throw new Error("The user already exists");
   const findUserType = await User.findOne({ user_type: data.user_type });
-  //   if(findUserType)
+  if (findUserType) {
+    return { ok: false, msg: "user_type aalready exists, choich another type" };
+  }
   const hash = await bcrypt.hash(data.password, 10);
   const user = await User.create({ ...data, password: hash });
-  return user;
+  return { ok: true, user };
 };
 
 export const login = async (username, password) => {
@@ -22,7 +24,8 @@ export const login = async (username, password) => {
   const token = jwt.sign(
     {
       id: user._id,
-      username,
+      username: user.username,
+      type: user.user_type,
     },
     process.env.JWT_SECRET,
     { expiresIn: "2h" },
