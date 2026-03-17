@@ -1,0 +1,283 @@
+[
+  {
+    "name": "Alpha-1",
+    "rocketType": "Shahab3",
+    "latitude": 35.6892,
+    "longitude": 51.389,
+    "city": "Tehran"
+  },
+  {
+    "name": "Bravo-7",
+    "rocketType": "Fetah110",
+    "latitude": 32.4279,
+    "longitude": 53.688,
+    "city": "Isfahan"
+  },
+  {
+    "name": "Charlie-3",
+    "rocketType": "Radwan",
+    "latitude": 29.5918,
+    "longitude": 52.5837,
+    "city": "Shiraz"
+  },
+  {
+    "name": "Delta-2",
+    "rocketType": "Kheibar",
+    "latitude": 36.2972,
+    "longitude": 59.6057,
+    "city": "Mashhad"
+  },
+  {
+    "name": "Echo-5",
+    "rocketType": "Shahab3",
+    "latitude": 38.0962,
+    "longitude": 46.2738,
+    "city": "Tabriz"
+  },
+  {
+    "name": "Foxtrot-9",
+    "rocketType": "Fetah110",
+    "latitude": 30.2839,
+    "longitude": 57.0834,
+    "city": "Kerman"
+  },
+  {
+    "name": "Golf-4",
+    "rocketType": "Radwan",
+    "latitude": 34.7967,
+    "longitude": 48.5163,
+    "city": "Hamedan"
+  },
+  {
+    "name": "Hotel-6",
+    "rocketType": "Kheibar",
+    "latitude": 37.5514,
+    "longitude": 45.076,
+    "city": "Urmia"
+  },
+  {
+    "name": "India-11",
+    "rocketType": "Shahab3",
+    "latitude": 33.9891,
+    "longitude": 50.8578,
+    "city": "Qom"
+  },
+  {
+    "name": "Juliet-8",
+    "rocketType": "Radwan",
+    "latitude": 36.5667,
+    "longitude": 52.6833,
+    "city": "Sari"
+  },
+
+  {
+    "name": "Kilo-12",
+    "rocketType": "Shahab3",
+    "latitude": 32.6546,
+    "longitude": 51.668,
+    "city": "Isfahan"
+  },
+  {
+    "name": "Lima-14",
+    "rocketType": "Fetah110",
+    "latitude": 35.7219,
+    "longitude": 51.3347,
+    "city": "Tehran"
+  },
+  {
+    "name": "Mike-22",
+    "rocketType": "Radwan",
+    "latitude": 27.1833,
+    "longitude": 56.2667,
+    "city": "Bandar Abbas"
+  },
+  {
+    "name": "November-3",
+    "rocketType": "Kheibar",
+    "latitude": 28.9234,
+    "longitude": 50.8203,
+    "city": "Bushehr"
+  },
+  {
+    "name": "Oscar-18",
+    "rocketType": "Shahab3",
+    "latitude": 31.8974,
+    "longitude": 54.3569,
+    "city": "Yazd"
+  },
+  {
+    "name": "Papa-25",
+    "rocketType": "Fetah110",
+    "latitude": 34.6416,
+    "longitude": 50.8746,
+    "city": "Qom"
+  },
+  {
+    "name": "Quebec-1",
+    "rocketType": "Radwan",
+    "latitude": 36.683,
+    "longitude": 48.483,
+    "city": "Zanjan"
+  },
+  {
+    "name": "Romeo-7",
+    "rocketType": "Kheibar",
+    "latitude": 33.4878,
+    "longitude": 48.3558,
+    "city": "Khorramabad"
+  },
+  {
+    "name": "Sierra-9",
+    "rocketType": "Shahab3",
+    "latitude": 34.3142,
+    "longitude": 47.065,
+    "city": "Kermanshah"
+  },
+  {
+    "name": "Tango-11",
+    "rocketType": "Fetah110",
+    "latitude": 31.3183,
+    "longitude": 48.6706,
+    "city": "Ahvaz"
+  },
+  {
+    "name": "Uniform-4",
+    "rocketType": "Radwan",
+    "latitude": 36.2605,
+    "longitude": 50.0036,
+    "city": "Qazvin"
+  },
+  {
+    "name": "Victor-15",
+    "rocketType": "Kheibar",
+    "latitude": 37.2808,
+    "longitude": 49.5831,
+    "city": "Rasht"
+  },
+  {
+    "name": "Whiskey-2",
+    "rocketType": "Shahab3",
+    "latitude": 36.5659,
+    "longitude": 53.0586,
+    "city": "Sari"
+  },
+  {
+    "name": "X-ray-8",
+    "rocketType": "Fetah110",
+    "latitude": 29.4963,
+    "longitude": 60.8629,
+    "city": "Zahedan"
+  },
+  {
+    "name": "Yankee-10",
+    "rocketType": "Radwan",
+    "latitude": 30.6895,
+    "longitude": 51.5875,
+    "city": "Yasuj"
+  },
+  {
+    "name": "Zulu-13",
+    "rocketType": "Kheibar",
+    "latitude": 35.1322,
+    "longitude": 47.0009,
+    "city": "Sanandaj"
+  },
+  {
+    "name": "Alpha-V2",
+    "rocketType": "Shahab3",
+    "latitude": 36.8425,
+    "longitude": 54.4328,
+    "city": "Gorgan"
+  },
+  {
+    "name": "Bravo-V2",
+    "rocketType": "Fetah110",
+    "latitude": 33.8911,
+    "longitude": 48.7513,
+    "city": "Borujerd"
+  },
+  {
+    "name": "Charlie-V2",
+    "rocketType": "Radwan",
+    "latitude": 34.0917,
+    "longitude": 49.6892,
+    "city": "Arak"
+  },
+  {
+    "name": "Delta-V2",
+    "rocketType": "Kheibar",
+    "latitude": 31.2001,
+    "longitude": 48.4001,
+    "city": "Abadan"
+  },
+  {
+    "name": "Echo-V2",
+    "rocketType": "Shahab3",
+    "latitude": 29.0001,
+    "longitude": 53.0001,
+    "city": "Jahrom"
+  },
+  {
+    "name": "Foxtrot-V2",
+    "rocketType": "Fetah110",
+    "latitude": 32.0001,
+    "longitude": 52.0001,
+    "city": "Najafabad"
+  },
+  {
+    "name": "Golf-V2",
+    "rocketType": "Radwan",
+    "latitude": 35.5001,
+    "longitude": 50.5001,
+    "city": "Karaj"
+  },
+  {
+    "name": "Hotel-V2",
+    "rocketType": "Kheibar",
+    "latitude": 36.0001,
+    "longitude": 48.0001,
+    "city": "Bijar"
+  },
+  {
+    "name": "India-V2",
+    "rocketType": "Shahab3",
+    "latitude": 37.0001,
+    "longitude": 46.0001,
+    "city": "Maragheh"
+  },
+  {
+    "name": "Juliet-V2",
+    "rocketType": "Fetah110",
+    "latitude": 38.5001,
+    "longitude": 45.0001,
+    "city": "Khoy"
+  },
+  {
+    "name": "Kilo-V2",
+    "rocketType": "Radwan",
+    "latitude": 27.5001,
+    "longitude": 54.0001,
+    "city": "Lar"
+  },
+  {
+    "name": "Lima-V2",
+    "rocketType": "Kheibar",
+    "latitude": 33.0001,
+    "longitude": 50.0001,
+    "city": "Golpayegan"
+  },
+  {
+    "name": "Mike-V2",
+    "rocketType": "Shahab3",
+    "latitude": 30.5001,
+    "longitude": 56.5001,
+    "city": "Rafsanjan"
+  },
+  {
+    "name": "November-V2",
+    "rocketType": "Fetah110",
+    "latitude": 36.5001,
+    "longitude": 49.5001,
+    "city": "Rudbar"
+  }
+]

@@ -12,6 +12,8 @@ export const useLauncherStore = create((set) => ({
   },
   deleteLauncher: async (id) => {
     await api.deleteLauncher(id);
+    const res = await api.getLaunchers();
+    set({ launchers: res.data });
   },
   updateLauncher: async (id, data) => {
     await api.updateLauncher(id, data);

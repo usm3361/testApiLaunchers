@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getLauncherById } from "../api/launchersApi";
+import '../App.css'
 
 export default function LauncherDetailsPage() {
   const { id } = useParams();

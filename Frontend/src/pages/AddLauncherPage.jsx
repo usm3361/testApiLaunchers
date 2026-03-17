@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { useLauncherStore } from "../store/launcherStore";
 import { useState } from "react";
+import '../App.css'
 
 export default function AddLauncherPage() {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ export default function AddLauncherPage() {
           className="form-select"
           onChange={(e) => setForm({ ...form, rocketType: e.target.value })}
         >
+          <option value="">Select Rocket Type</option>
           <option>Shahab3</option>
           <option>Fetah110</option>
           <option>Radwan</option>

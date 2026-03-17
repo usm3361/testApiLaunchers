@@ -16,3 +16,7 @@ export const createLauncher = async (data) => {
 export const updateLauncher = async (id, data) => {
   return await Launcher.findByIdAndUpdate(id, data, { new: true });
 };
+
+export const deleteLauncher = async (id) => {
+  return await Launcher.findByIdAndDelete(id);
+};

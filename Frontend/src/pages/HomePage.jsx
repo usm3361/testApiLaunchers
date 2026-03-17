@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLauncherStore } from "../store/launcherStore";
 import LancherCard from "../components/LancherCard";
 import { Link } from "react-router";
+import '../App.css'
 
 export default function HomePage() {
   const { launchers, fetchLauncher } = useLauncherStore();
@@ -46,7 +47,7 @@ export default function HomePage() {
           <option>Kheibar</option>
         </select>
         <Link id="add-launcher-button" to="/add">
-          add Launcher
+          Add Launcher
         </Link>
       </div>
       <div id="launchers-list">
