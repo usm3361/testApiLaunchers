@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { UsersPage } from "./pages/UsersPage";
 
 function App() {
   return (
@@ -23,9 +25,14 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/add" element={<AddLauncherPage />} />
-          <Route path="/launcher/:id" element={<LauncherDetailsPage />} />
+          <Route
+            path="/launchers"
+            element={
+              <ProtectedRoute>
+                <LauncherDetailsPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

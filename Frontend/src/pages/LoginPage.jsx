@@ -6,7 +6,7 @@ export default function LoginPage() {
   const login = useAuthStore((s) => s.login);
   const nav = useNavigate();
   const [form, setForm] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -17,9 +17,9 @@ export default function LoginPage() {
   return (
     <div className="form">
       <input
-        type="email"
-        placeholder="email"
-        onChange={(e) => setForm({ ...form, email: e.target.value })}
+        type="text"
+        placeholder="username"
+        onChange={(e) => setForm({ ...form, username: e.target.value })}
       />
       <input
         type="password"

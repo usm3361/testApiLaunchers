@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useUsersStore } from "../store/usersStore.js";
 
-export default function UsersPage() {
+export function UsersPage() {
   const { users, fetchUsers, deleteUser } = useUsersStore();
 
   useEffect(() => {
