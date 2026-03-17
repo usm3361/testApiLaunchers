@@ -1,25 +1,32 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { getLauncherById } from "../api/launchersApi";
-import '../App.css'
+import { useEffect } from "react";
+import "../App.css";
+import { useAuthStore } from "../store/authStore.js";
+import { useLauncherStore } from "../store/launcherStore.js";
 
 export default function LauncherDetailsPage() {
-  const { id } = useParams();
-  const [launcher, setLauncher] = useState(null);
+  const { launchers, fetchLauncher, deleteLauncher } = useLauncherStore();
+  const { user } = useAuthStore();
 
   useEffect(() => {
-    getLauncherById(id).then((res) => setLauncher(res.data));
+    fetchLauncher();
   }, []);
-  if (!launcher) return <p id="loading-text">Loading...</p>;
+
+  const filtered = launchers.filter((l) => {
+    if (user?.type === "admin") return true;
+    if (user?.type === "intel") return l.status !== "destroyed";
+    return l.status === "active";
+  });
   return (
     <div id="launcher-etails-page">
-      <h1 id="launcher-details-title">{launcher.name}</h1>
-      <div id="details-card">
-        <p className="details-field">City: {launcher.city}</p>
-        <p className="details-field">Rocket Type: {launcher.rocketType}</p>
-        <p className="details-field">Latitude: {launcher.latitude}</p>
-        <p className="details-field">Longitude: {launcher.longitude}</p>
-      </div>
+      <h2>Launchers</h2>
+      {filtered.map((l) => (
+        <div key={l._id}>
+          {l.name} - {l.status}
+          {user?.type === "admin" && (
+            <button onClick={() => deleteLauncher(l._id)}>Delete</button>
+          )}
+        </div>
+      ))}
     </div>
   );
 }

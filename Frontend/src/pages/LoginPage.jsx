@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { useAuthStore } from "../store/authStore";
+import { useAuthStore } from "../store/authStore.js";
 import { useState } from "react";
 
 export default function LoginPage() {
