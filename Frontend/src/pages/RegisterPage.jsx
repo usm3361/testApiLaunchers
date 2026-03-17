@@ -10,7 +10,8 @@ export default function RegisterPage() {
   });
 
   const submit = async () => {
-    await api.register(form);
+    const token = localStorage.getItem("token")
+    await api.register(form,token);
     alert("created");
   };
   return (

@@ -11,6 +11,11 @@ export default function Navbar() {
       ) : (
         <Link to="/login">Login</Link>
       )}
+      <button
+        onClick={() => alert(`User: ${user?.username}, Role:${user?.type}`)}
+      >
+        My Profile
+      </button>
     </nav>
   );
 }

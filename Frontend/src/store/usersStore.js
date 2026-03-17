@@ -14,7 +14,7 @@ export const useUsersStore = create((set) => ({
     set((state) => ({ users: state.users.filter((u) => u._id !== id) }));
   },
   updateUser: async (user) => {
-    const res = await api.updateUser(user.id, localStorage.getItem("token"));
+    const res = await api.updateUser(user._id, localStorage.getItem("token"));
     set((state) => ({
       users: state.users.map((u) => (u._id === user._id ? res.data : u)),
     }));

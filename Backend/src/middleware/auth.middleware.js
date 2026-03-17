@@ -1,13 +1,17 @@
 import jwt from "jsonwebtoken";
 
 export const authMiddleware = (req, res, next) => {
-  const token = req.headers.authorization;
-  if (!token) return res.status(401).json({ msg: "no token" });
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return res.status(401).json({ msg: "no token" });
+  const token = authHeader.startsWith("Bearer ")
+    ? authHeader.split(" ")[1]
+    : authHeader;
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
-  } catch {
+  } catch (error) {
+    console.error("Token verification failed:", error.message);
     res.status(401).json({ msg: "invalid token" });
   }
 };

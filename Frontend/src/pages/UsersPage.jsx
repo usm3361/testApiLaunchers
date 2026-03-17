@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useUsersStore } from "../store/usersStore.js";
+import {useUsersStore } from "../store/usersStore"
 
 export function UsersPage() {
   const { users, fetchUsers, deleteUser } = useUsersStore();

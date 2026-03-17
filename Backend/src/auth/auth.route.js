@@ -10,7 +10,7 @@ const router = express.Router()
 router.post("/login",asyncHandler(loginControl))
 router.post("/register/create", authMiddleware,allowRoles("admin"),asyncHandler(registerControl))
 router.put("/register/update",authMiddleware,allowRoles("admin"),asyncHandler(updateUserControl))
-router.delete("/register/delete",authMiddleware,allowRoles("admin",asyncHandler(deleteUserControl)))
+router.delete("/register/delete/:id",authMiddleware,allowRoles("admin",asyncHandler(deleteUserControl)))
 router.get("/getUser",authMiddleware, asyncHandler(getUser))
 router.get("/users",authMiddleware, allowRoles("admin"),asyncHandler(getAllUsers))
 

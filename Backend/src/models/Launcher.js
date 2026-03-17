@@ -25,6 +25,7 @@ const launcherSchema = new mongoose.Schema({
     unique: true,
     trim: true,
   },
+  destroyed: { type: Boolean, default: false },
 });
 
 export default mongoose.model("Launcher", launcherSchema);

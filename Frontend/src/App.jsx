@@ -16,7 +16,30 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <HomePage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/add"
+            element={
+              <ProtectedRoute>
+                <AddLauncherPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/launcher/:id"
+            element={
+              <ProtectedRoute>
+                <LauncherDetailsPage />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/users"
             element={
@@ -25,14 +48,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/launchers"
-            element={
-              <ProtectedRoute>
-                <LauncherDetailsPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </BrowserRouter>
     </div>
