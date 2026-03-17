@@ -12,7 +12,7 @@ export function UsersPage() {
       <h2>Users</h2>
       {users.map((u) => (
         <div key={u._id}>
-          {u.username}| {u.user_type}
+          Name: {u.username} | Type: {u.user_type}
           <button onClick={() => deleteUser(u._id)}>Delete</button>
         </div>
       ))}
